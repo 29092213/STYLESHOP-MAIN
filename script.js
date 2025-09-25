@@ -149,13 +149,14 @@ function renderizarCarrinho() {
   carrinho.forEach((item, index) => {
     const card = document.createElement('div');
     card.className = 'produto';
-    card.style.position = 'relative';
     card.innerHTML = `
       <img src="${item.imagem}" alt="${item.nome}" />
       <h3>${item.nome}</h3>
       <p>${item.preco}</p>
       <button class="btn-excluir" data-index="${index}" title="Remover item" aria-label="Remover item do carrinho">&times;</button>
+      ${index < carrinho.length - 1 ? '<div style="margin: 15px 0; text-align: center; color: #ccc;">=======</div>' : ''}
     `;
+});
     cartContainer.appendChild(card);
 
     total += precoParaNumero(item.preco);
