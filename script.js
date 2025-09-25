@@ -165,7 +165,7 @@ function renderizarCarrinho() {
   cartTotal.textContent = `Total: ${numeroParaPreco(total)}`;
   mensagem += `Total: ${numeroParaPreco(total)}`;
 
-  finalizeBtn.href = `https://wa.me/11970128962?text=${mensagem}`;
+  finalizeBtn.href = `https://wa.me/11985647675?text=${mensagem}`;
 
   document.querySelectorAll('.btn-excluir').forEach(btn => {
     btn.addEventListener('click', e => {
